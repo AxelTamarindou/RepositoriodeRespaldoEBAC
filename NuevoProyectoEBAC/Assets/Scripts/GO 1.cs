@@ -4,35 +4,28 @@ using UnityEngine;
 public class GO1 : MonoBehaviour
 {
     public GameObject Cubo;
-    bool negro;
-    bool blanco;
+    public bool color = false;
+    MeshRenderer meshRenderer_Cubo;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    void Start()
     {
-        blanco = true;
-        negro = false;
-        var c = Cubo.GetComponent<MeshRenderer>().material;
-        Color colorblanco = c.color = Color.black;
-
+        meshRenderer_Cubo = Cubo.GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (negro || blanco)
+        if (color)
         {
-            Debug.Log("La operación es verdadera, por lo que el color es blanco");
-            var c = Cubo.GetComponent<MeshRenderer>().material;
-            Color colorblanco = c.color = Color.white;
-            blanco = false;
+            meshRenderer_Cubo.material.color = Color.black;
+            color = false;
         }
         else
         {
-            Debug.Log("La operación es falsa, por lo que el color es negro");
-            var c = Cubo.GetComponent<MeshRenderer>().material;
-            Color colorblanco = c.color = Color.black;
-            blanco = true;
+            meshRenderer_Cubo.material.color = Color.white;
+            color = true;
         }
 
 

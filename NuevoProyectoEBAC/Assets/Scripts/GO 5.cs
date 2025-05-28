@@ -6,36 +6,30 @@ public class GO5 : MonoBehaviour
 {
     public GameObject Cubo5;
 
-    bool Negro;
-    bool Blanco;
+    public bool estado;
+    public bool estadoV;
+    MeshRenderer meshRenderer_Cube;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     // Update is called once per frame
-    private void Awake()
+    private void Start()
     {
-        Blanco = true;
-        Negro = false;
-        // Mi idea de código era
-        // var White = (Cubo5.GetComponent<GO3>().blanco = true);
-        // var Black = (Cubo5.GetComponent<GO3>().negro = false);
-        // Blanco = White;
-        // Negro = Black;
-        // if (Negro && Blanco)
-        //{
-        //   Color color = c.color = Color.white;
-        //  Debug.Log("La operación es verdadera, por lo que el GO5 es blanco");
-        //}
+        meshRenderer_Cube = Cubo5.GetComponent<MeshRenderer>();
+        estado = Cubo5.GetComponent<GO4>().blanco;
+        estadoV = Cubo5.GetComponent<GO3>().blanco;
+
     }
     void FixedUpdate()
     {
-        var c = Cubo5.GetComponent<MeshRenderer>().material;
-        if (Blanco && Negro)
+        if (estado && estadoV)
         {
-            Color color = c.color = Color.white;
+            estado = true;
+            meshRenderer_Cube.material.color = Color.white;
             Debug.Log("La operación es verdadera, por lo que el GO5 es blanco");
         }
         else
         {
-            Color color = c.color = Color.black;
+            meshRenderer_Cube.material.color = Color.black;
+            estado = false;
             Debug.Log("La operación es falsa, por lo que el GO5 es negro");
         }
     }
