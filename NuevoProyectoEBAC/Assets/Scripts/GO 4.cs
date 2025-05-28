@@ -5,6 +5,7 @@ public class GO4 : MonoBehaviour
     public GameObject Esfera2;
     public bool blanco;
     public bool negro;
+    public bool falso;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -16,15 +17,17 @@ public class GO4 : MonoBehaviour
         var c = Esfera2.GetComponent<MeshRenderer>().material;
         //c.color = new Color(Random.value, Random.value, Random.value);
 
-        if (negro || blanco)
+        if (blanco || negro)
         {
-            //Debug.Log("La operación es verdadera, por lo que el color es blanco");
+            // Debug.Log("La operación es verdadera, por lo que el color es blanco");
             Color color = c.color = Color.white;
+            falso = true;
         }
         else
         {
             //Debug.Log("La operación es falsa, por lo que el color es negro");
             Color color = c.color = Color.black;
+            falso = false;
         }
     }
 

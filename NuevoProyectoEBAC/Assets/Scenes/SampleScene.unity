@@ -421,6 +421,7 @@ MonoBehaviour:
   Esfera: {fileID: 403621779}
   blanco: 0
   negro: 0
+  verdadero: 0
 --- !u!114 &330585551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,6 +437,7 @@ MonoBehaviour:
   Esfera2: {fileID: 950797882}
   blanco: 0
   negro: 0
+  falso: 0
 --- !u!114 &330585552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,6 +453,8 @@ MonoBehaviour:
   Cubo5: {fileID: 909082599}
   estado: 0
   estadoV: 0
+  verdadero: {fileID: 330585550}
+  falso: {fileID: 330585551}
 --- !u!1 &403621779 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2630834055513424861, guid: 72b59dbb2d95f4741a02aee85e0bc491, type: 3}

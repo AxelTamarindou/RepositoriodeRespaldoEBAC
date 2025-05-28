@@ -8,29 +8,28 @@ public class GO5 : MonoBehaviour
 
     public bool estado;
     public bool estadoV;
+    public GO3 verdadero;
+    public GO4 falso;
     MeshRenderer meshRenderer_Cube;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     // Update is called once per frame
     private void Start()
     {
         meshRenderer_Cube = Cubo5.GetComponent<MeshRenderer>();
-        estado = Cubo5.GetComponent<GO4>().blanco;
-        estadoV = Cubo5.GetComponent<GO3>().blanco;
-
     }
     void FixedUpdate()
     {
+        estado = verdadero.verdadero;
+        estadoV = falso.falso;
         if (estado && estadoV)
         {
-            estado = true;
             meshRenderer_Cube.material.color = Color.white;
-            Debug.Log("La operación es verdadera, por lo que el GO5 es blanco");
+            Debug.Log("El valor del Cubo 3 y Cubo 4 dan cómo resultado que este cubo sea blanco");
         }
         else
         {
             meshRenderer_Cube.material.color = Color.black;
-            estado = false;
-            Debug.Log("La operación es falsa, por lo que el GO5 es negro");
+            Debug.Log("El valor del Cubo 3 y Cubo 4 dan cómo resultado que este cubo sea negro");
         }
     }
 }
