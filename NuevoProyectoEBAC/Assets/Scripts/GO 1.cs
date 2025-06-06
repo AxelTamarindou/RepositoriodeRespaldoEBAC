@@ -5,7 +5,7 @@ public class GO1 : MonoBehaviour
 {
     public GameObject Cubo;
     public bool color = false;
-    MeshRenderer meshRenderer_Cubo;
+    public MeshRenderer meshRenderer_Cubo;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

@@ -4,6 +4,7 @@ public class EjerciciosVariablesMod8 : MonoBehaviour
 
 {
     public GameObject CubodeColores;
+    public GameObject CuboBlancoyNegro;
     private MeshRenderer meshRenderer_Cubo;
     public string colores;
     int E = 8;
@@ -14,7 +15,6 @@ public class EjerciciosVariablesMod8 : MonoBehaviour
     int Ee2 = 0;
     void Start()
     {
-        meshRenderer_Cubo = CubodeColores.GetComponent<MeshRenderer>();
         Ff2 = (int)F + f2;
         Debug.Log(Ff2);
         float FE = (int)F + (int)E;
@@ -43,7 +43,6 @@ public class EjerciciosVariablesMod8 : MonoBehaviour
         float b = 0.1234f;
         string a = b.ToString();
         string c = a.Substring(0, 6);
-        meshRenderer_Cubo = CubodeColores.GetComponent<MeshRenderer>();
         string NombreCompleto = "Axel Vázquez López";
         string PrimerApellido = NombreCompleto.Substring(5, 7);
         string SegundoApellido = NombreCompleto.Substring(13, 5);
@@ -59,18 +58,20 @@ public class EjerciciosVariablesMod8 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var meshRenderer_CuboBooleano = CuboBlancoyNegro.GetComponent<MeshRenderer>();
+        var meshRenderer_Cubo = CubodeColores.GetComponent<MeshRenderer>();
         E += 2;
         Ee2 += E + e2;
         Debug.Log(Ee2);
 
         if (Ee2 % 2 == 0)
         {
-            meshRenderer_Cubo.material.color = Color.white;
+            meshRenderer_CuboBooleano.material.color = Color.white;
             Debug.Log("El número" + Ee2 + "Es par, por lo tanto el color del cubo es blanco");
         }
         else
         {
-            meshRenderer_Cubo.material.color = Color.black;
+            meshRenderer_CuboBooleano.material.color = Color.black;
             Debug.Log("El número" + Ee2 + "Es non, por lo tanto el color del cubo es negro");
         }
             switch (colores)
