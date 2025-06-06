@@ -254,6 +254,8 @@ GameObject:
   - component: {fileID: 330585550}
   - component: {fileID: 330585551}
   - component: {fileID: 330585552}
+  - component: {fileID: 330585554}
+  - component: {fileID: 330585555}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -393,6 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cubo: {fileID: 193060511}
   color: 0
+  meshRenderer_Cubo: {fileID: 0}
 --- !u!114 &330585549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,7 +416,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fad695b28427e754dbbcf9e7aea40f39, type: 3}
   m_Name: 
@@ -429,7 +432,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e1607aa030eb3c4482927f6ae27fb61, type: 3}
   m_Name: 
@@ -445,7 +448,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 067521dfe5760244b914de8a5a05a5f8, type: 3}
   m_Name: 
@@ -455,6 +458,33 @@ MonoBehaviour:
   estadoV: 0
   verdadero: {fileID: 330585550}
   falso: {fileID: 330585551}
+--- !u!114 &330585554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e88c0ed8d996b44a0df32f14ad9aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CubodeColores: {fileID: 909082599}
+  colores: Negro
+--- !u!114 &330585555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245c7b3500bbc66469c4419bde2a2134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cubo: {fileID: 193060511}
 --- !u!1 &403621779 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2630834055513424861, guid: 72b59dbb2d95f4741a02aee85e0bc491, type: 3}
