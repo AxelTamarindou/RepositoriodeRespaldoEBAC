@@ -29,19 +29,20 @@ public class EjerciciosVariablesMod8 : MonoBehaviour
             Debug.Log("La operación fue correcta");
         }
         string Saludo = "Hola Mundo desde EBAC Palabra muy grande";
+        string SaludoPar = "";
 
         for (int i = 0; i < Saludo.Length; i += 2)
         {
             {
-                Debug.Log(Saludo[i] + "");
+                Debug.Log(SaludoPar += Saludo[i] + "");
             }
         }
 
-        // Segundo intento
+        //Segundo intento
         //for (int i = 0; i < Saludo.Length; i++)
         //{
         //    {
-        //        Debug.Log(Saludo[i % 2] + "");
+        //        Debug.Log(SaludoPar += Saludo[i % 2] + "");
         //    }
         //}
 
