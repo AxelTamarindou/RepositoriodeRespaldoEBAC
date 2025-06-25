@@ -255,7 +255,6 @@ GameObject:
   - component: {fileID: 330585551}
   - component: {fileID: 330585552}
   - component: {fileID: 330585555}
-  - component: {fileID: 330585556}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -465,7 +464,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 245c7b3500bbc66469c4419bde2a2134, type: 3}
   m_Name: 
@@ -473,18 +472,6 @@ MonoBehaviour:
   CubodeColores: {fileID: 193060511}
   CuboBlancoyNegro: {fileID: 909082599}
   colores: Verde
---- !u!114 &330585556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1708308714581e74290ef922fca5ca2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &403621779 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2630834055513424861, guid: 72b59dbb2d95f4741a02aee85e0bc491, type: 3}
@@ -670,6 +657,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2630834055513424861, guid: 72b59dbb2d95f4741a02aee85e0bc491, type: 3}
   m_PrefabInstance: {fileID: 1929465509}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &950797888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950797882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34db7af0e4b34f940ba29fb9735e5ce5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1929465509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -725,7 +724,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2630834055513424861, guid: 72b59dbb2d95f4741a02aee85e0bc491, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 950797888}
   m_SourcePrefab: {fileID: 100100000, guid: 72b59dbb2d95f4741a02aee85e0bc491, type: 3}
 --- !u!1001 &3884272487709291611
 PrefabInstance:
