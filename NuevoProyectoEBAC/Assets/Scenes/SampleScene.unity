@@ -255,6 +255,8 @@ GameObject:
   - component: {fileID: 330585551}
   - component: {fileID: 330585552}
   - component: {fileID: 330585555}
+  - component: {fileID: 330585556}
+  - component: {fileID: 330585557}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -472,6 +474,35 @@ MonoBehaviour:
   CubodeColores: {fileID: 193060511}
   CuboBlancoyNegro: {fileID: 909082599}
   colores: Verde
+--- !u!114 &330585556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80d3c333f6d6b74a8b97dc9395c6d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numero1: 5
+  numero2: 4
+  numero3: 0
+  resultado: 0
+--- !u!114 &330585557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756c63c6db49a2b47a268b926c268b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MiFuncion: 
 --- !u!1 &403621779 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2630834055513424861, guid: 72b59dbb2d95f4741a02aee85e0bc491, type: 3}
@@ -664,7 +695,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950797882}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34db7af0e4b34f940ba29fb9735e5ce5, type: 3}
   m_Name: 
