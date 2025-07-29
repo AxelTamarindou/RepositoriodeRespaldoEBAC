@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 
 public class Ejerciciosestructuras : MonoBehaviour
 {
-    HashSet<string> HashsetStrings = new HashSet<string>();
-    Queue<string> Strings = new Queue<string>();
-    Queue<string> StringsOrden = new Queue<string>();
-    Stack<string> StackBaraja = new Stack<string>();
+    HashSet<string> HashsetColores = new HashSet<string>();
+    HashSet<int> HashsetNúmeros = new HashSet<int>();
+    Queue<string> ColoresOrden = new Queue<string>();
+    Stack<string> StackColores = new Stack<string>();
+    public List<int> listaNumeros = new List<int>();
     public List<int> MiFuncion = new List<int>();
     int tamaño = 15;
     int RangoSuperior = 100;
@@ -19,49 +21,7 @@ public class Ejerciciosestructuras : MonoBehaviour
 
     void Start()
     {
-        //for (int i = 0; i < tamaño; i++)
-        //{
-        //    MiFuncion.Add(Random.Range(RangoInferior, RangoSuperior));
-        //}
-
-        //foreach (var numero in MiFuncion)
-        //{
-        //    Debug.Log(numero);
-        //}
-
-        //Debug.Log("Lista de 100 números aleatorios ordenados");
-
-        //var listaOrdenada = MiFuncion.OrderBy(p => p).ToList();
-
-        //foreach (var numero in listaOrdenada)
-        //{
-        //    Debug.Log(numero);
-        //}
-
-
-        //StackBaraja.Push("As");
-        //StackBaraja.Push("5");
-        //StackBaraja.Push("1");
-        //StackBaraja.Push("4");
-        //StackBaraja.Push("3");
-        //Debug.Log(StackBaraja.Peek());
-        //StackBaraja.Pop();
-        //Debug.Log(StackBaraja.Peek());
-        //StackBaraja.Pop();
-        //Debug.Log(StackBaraja.Peek());
-        //StackBaraja.Pop();
-        //Debug.Log(StackBaraja.Peek());
-        //StackBaraja.Pop();
-        //Debug.Log(StackBaraja.Peek());
-        //StackBaraja.Pop();
-        //for (int i = 0; i < 20; i++)
-        //{
-        //    HashsetInts.Add(i);
-        //}
-        //foreach (int entero in HashsetInts)
-        //{
-        //    Debug.Log(entero);
-        //}
+       
 
     }
     public void Arreglo(int RangoInferior, int RangoSuperior)
@@ -100,62 +60,54 @@ public class Ejerciciosestructuras : MonoBehaviour
         }
     }
 
-    public void ProposicionesStrings()
+    public void LanzamientoDado()
     {
-        Strings.Enqueue("Algunos perros son negros o Algunos perros son blancos");
-        Debug.Log(HashsetStrings.Add(Strings.Peek()));
-        Debug.Log(Strings.Peek());
-        if (HashsetStrings.Contains("Algunos perros son"))
+        for (int i = 0; i < 10; i++)
         {
-            HashsetStrings.Remove("Algunos perros son");
+            listaNumeros.Add(Random.Range(1, 7));
         }
-        else
+        
+        Debug.Log("En 10 lanzamientos de un dado, los resultados fueron: ");
+        
+        foreach (int numero in listaNumeros)
         {
-            Debug.Log("La proposición es verdadera, por lo que se realiza el acortamiento de la oración");
-            Strings.Enqueue("Algunos perros son negros o blancos");
-            Strings.Dequeue();
-            Debug.Log(Strings.Peek());
+            Debug.Log(numero);
+            HashsetNúmeros.Add(numero);
+        }
+        
+        Debug.Log("Los números que aparecen repetidos son:");
+        
+        foreach (int numero in HashsetNúmeros)
+        {
+            Debug.Log(numero);
         }
     }
     
-    public void ListaBaraja()
+    public void Colores()
     {
-        StackBaraja.Push("Azul");
-        StackBaraja.Push("Verde");
-        StackBaraja.Push("Rojo");
-        StackBaraja.Push("Amarillo");
+        StackColores.Push("Rojo");
+        StackColores.Push("Verde");
+        StackColores.Push("Azul");
+        StackColores.Push("Cian");
+        StackColores.Push("Morado");
+        StackColores.Push("Amarillo");
 
-        //foreach (string color in StackBaraja) 
-        //{
-        //    Debug.Log(color);
-        //    StringsOrden.Enqueue(color);
-        //}
-        StringsOrden.Enqueue(StackBaraja.Peek());
-        Debug.Log(StringsOrden.Peek());
-        StackBaraja.Pop();
-        StringsOrden.Dequeue();
-        StringsOrden.Enqueue(StackBaraja.Peek());
-        Debug.Log(StringsOrden.Peek());
-        StackBaraja.Pop();
-        StringsOrden.Dequeue();
-        StringsOrden.Enqueue(StackBaraja.Peek());
-        Debug.Log(StringsOrden.Peek());
-        StackBaraja.Pop();
-        StringsOrden.Dequeue();
-        StringsOrden.Enqueue(StackBaraja.Peek());
-        Debug.Log(StringsOrden.Peek());
+        int NumColores = StackColores.Count;
 
+        for (int i = 0; i < NumColores; i++)
+        {
+            Debug.Log(StackColores.Peek());
+            ColoresOrden.Enqueue(StackColores.Peek());
+            StackColores.Pop();
+        }
 
+        int NumOrden = ColoresOrden.Count;
 
-        // Primero se forma en la cola, el primer elemento de la fila
-        //StringsOrden.Enqueue(StackBaraja.Peek());
-        //Debug.Log(StringsOrden.Peek());
-        //// Sale el primer elemento de la fila, que se formó en la cola
-        //StringsOrden.Dequeue();
-        //StackBaraja.Pop();
-        //// Pasa al siguiente elemento de la fila agregarse a la cola
-        //StringsOrden.Enqueue(StackBaraja.Peek());
-        //Debug.Log(StringsOrden.Peek());
+        for (int i = 0; i < NumOrden; i++)
+        {
+            Debug.Log(ColoresOrden.Peek());
+            ColoresOrden.Dequeue();
+        }
     }
     void Update()
     {
